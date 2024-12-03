@@ -1,8 +1,0 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias f='fish'
-
-bind -x '"\C-q":"exit"'
-
-PS1='\W > '
