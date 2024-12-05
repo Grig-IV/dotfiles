@@ -2,6 +2,8 @@ theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
+cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -10,4 +12,13 @@ select = "underline"
 
 [keys.normal]
 a = "insert_mode"
+A = "insert_at_line_start"
 t = "append_mode"
+T = "insert_at_line_end"
+w = "open_below"
+W = "open_above"
+
+o = "move_next_word_start"
+O = "move_next_long_word_start"
+n = "move_prev_word_start"
+N = "move_prev_long_word_start"
