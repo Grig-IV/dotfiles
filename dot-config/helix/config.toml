@@ -10,6 +10,13 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.auto-save]
+focus-lost = true
+
+[editor.indent-guides]
+character = "┊"
+render = true
+
 [keys.normal]
 a = "insert_mode"
 A = "insert_at_line_start"
@@ -22,3 +29,27 @@ o = "move_next_word_start"
 O = "move_next_long_word_start"
 n = "move_prev_word_start"
 N = "move_prev_long_word_start"
+
+pageup = "page_cursor_half_up"
+pagedown = "page_cursor_half_down"
+
+h = "hover"
+tab = "goto_last_accessed_file"
+
+C-s = ":wa"
+C-q = ":wqa"
+
+F5 = ":config-reload"
+
+[keys.normal.e]
+e = "move_prev_word_end"
+m = "search_prev"
+d = "goto_prev_diag"
+
+[keys.normal.i]
+e = "move_next_word_end"
+m = "search_next"
+d = "goto_prev_diag"
+
+[keys.normal.g]
+t = "find_till_char"
