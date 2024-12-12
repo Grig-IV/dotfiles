@@ -1,9 +1,11 @@
 theme = "catppuccin_mocha"
 
+
 [editor]
 line-number = "relative"
 cursorline = true
 color-modes = true
+insert-final-newline = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,6 +18,21 @@ focus-lost = true
 [editor.indent-guides]
 character = "┊"
 render = true
+skip-levels = 1
+
+[editor.statusline]
+left = [
+  "mode",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
+center = ["diagnostics"]
+right = ["workspace-diagnostics", "register", "spinner"]
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
 
 [keys.normal]
 a = "insert_mode"
@@ -33,11 +50,17 @@ N = "move_prev_long_word_start"
 pageup = "page_cursor_half_up"
 pagedown = "page_cursor_half_down"
 
+r = "replace_with_yanked"
 h = "hover"
+j = "join_selections"
+l = "find_till_char"
+L = "till_prev_char"
 tab = "goto_last_accessed_file"
 
 C-s = ":wa"
 C-q = ":wqa"
+C-a = "code_action"
+C-f = "file_picker"
 
 F5 = ":config-reload"
 
@@ -50,6 +73,3 @@ d = "goto_prev_diag"
 e = "move_next_word_end"
 m = "search_next"
 d = "goto_prev_diag"
-
-[keys.normal.g]
-t = "find_till_char"
