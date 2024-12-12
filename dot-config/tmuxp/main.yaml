@@ -1,0 +1,4 @@
+session_name: default
+windows:
+  - panes:
+      - echo 'Hello!'
