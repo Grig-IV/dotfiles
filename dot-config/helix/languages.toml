@@ -2,8 +2,12 @@
 name = "go"
 formatter = { command = "goimports" }
 
-
 [[language]]
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
+
+[[language]]
+name = "nix"
+auto-format = true
+formatter = { command = "alejandra", args = ["-"] }
