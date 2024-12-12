@@ -16,3 +16,5 @@ function lfcd
 end
 
 bind \cl 'lfcd; commandline -f execute'
+
+set EDITOR hx
