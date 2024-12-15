@@ -17,7 +17,6 @@ function setup_hm_session_vars
 
     set -gx CONFIG "$HOME"'/.config'
     set -gx EXTMIND "$HOME"'/extended-mind'
-    set -gx NIXCONF /etc/nixos
     set -gx NVIMCONF '~/.config/nvim'
 
     set -gx SKIM_DEFAULT_OPTIONS '--color=fg:#cdd6f4,bg:empty,matched:#89dceb,matched_bg:#1e1e2e,current:#fab387,current_bg:#313244,current_match:#1e1e2e,current_match_bg:#89dceb,spinner:#a6e3a1,info:#bac2de,prompt:#cdd6f4,cursor:#fab387,selected:#eba0ac,header:#94e2d5,border:#6c7086 --bind \'ctrl-q:abort\''
@@ -29,18 +28,46 @@ end
 setup_hm_session_vars
 
 status is-interactive; and begin
+    # local variables
+    set -l NIXCONF /etc/nixos
+
+    # shortcuts
     abbr -a gc 'cd $HOME/.config'
     abbr -a gd 'cd $HOME/.config/dotfiles'
     abbr -a gn 'cd $HOME/.config/nvim'
     abbr -a gs 'cd $HOME/sources'
-    abbr -a gm 'cd $HOME/media'
+    abbr -a gm 'cd $HOME/Extended Mind'
     abbr -a gx 'cd $NIXCONF'
 
-    abbr -a stw 'stow --dotfiles --no-folding -t $HOME -d $HOME/.config -S dotfiles'
-    abbr -a tlm 'tmuxp load -y main'
+    abbr -a s 'jump -d $HOME/sources/'
+    abbr -a m 'cd ~/Extended Mind & $EDITOR context.md'
 
+    # verbosity and settings that you pretty much just always are going to want
+    abbr -a cp 'cp -ivr'
+    abbr -a mv 'mv -iv'
+    abbr -a rm 'rm -vI'
+    abbr -a mkdir 'mkdir -pv'
+    abbr -a bc 'bc -ql'
+
+    # colorize commands when possible
+    abbr -a grep 'grep --color=auto'
+    abbr -a diff 'diff --color=auto'
+    abbr -a ip 'ip -color=auto'
+
+    # nix
+    abbr -a hms 'home-manager switch --flake $NIXCONF#$(whoami)@$(hostname)'
+    abbr -a nrs 'sudo nixos-rebuild switch --flake $NIXCONF#$(hostname)'
+    abbr -a nd 'nix develop'
+    abbr -a lu 'nix flake lock --update-input'
+    abbr -a x 'jump -r $NIXCONF'
+
+    # go
     abbr -a gmt 'go mod tidy'
     abbr -a gmi 'go mod init'
+
+    # misc
+    abbr -a stw 'stow --dotfiles --no-folding -t $HOME -d $HOME/.config -S dotfiles'
+    abbr -a tlm 'tmuxp load -y main'
 
     bind \cq exit
     bind \cl 'clear; commandline -f repaint'
