@@ -56,11 +56,14 @@ j = "join_selections"
 l = "find_till_char"
 L = "till_prev_char"
 tab = "goto_last_accessed_file"
+home = "goto_first_nonwhitespace"
 
 C-s = ":wa"
 C-q = ":wqa"
 C-a = "code_action"
 C-f = "file_picker"
+C-pageup = "goto_file_start"
+C-pagedown = "goto_file_end"
 
 F5 = ":config-reload"
 
