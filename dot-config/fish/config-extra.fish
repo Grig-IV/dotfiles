@@ -18,6 +18,7 @@ function setup_hm_session_vars
     set -gx CONFIG "$HOME"'/.config'
     set -gx EXTMIND "$HOME"'/extended-mind'
     set -gx NVIMCONF '~/.config/nvim'
+    set -gx NIXCONF /etc/nixos
 
     set -gx SKIM_DEFAULT_OPTIONS '--color=fg:#cdd6f4,bg:empty,matched:#89dceb,matched_bg:#1e1e2e,current:#fab387,current_bg:#313244,current_match:#1e1e2e,current_match_bg:#89dceb,spinner:#a6e3a1,info:#bac2de,prompt:#cdd6f4,cursor:#fab387,selected:#eba0ac,header:#94e2d5,border:#6c7086 --bind \'ctrl-q:abort\''
 
@@ -28,19 +29,16 @@ end
 setup_hm_session_vars
 
 status is-interactive; and begin
-    # local variables
-    set -l NIXCONF /etc/nixos
-
     # shortcuts
     abbr -a gc 'cd $HOME/.config'
     abbr -a gd 'cd $HOME/.config/dotfiles'
     abbr -a gn 'cd $HOME/.config/nvim'
     abbr -a gs 'cd $HOME/sources'
-    abbr -a gm 'cd $HOME/Extended Mind'
+    abbr -a gm 'cd "$HOME/Extended Mind"'
     abbr -a gx 'cd $NIXCONF'
 
     abbr -a s 'jump -d $HOME/sources/'
-    abbr -a m 'cd ~/Extended Mind & $EDITOR context.md'
+    abbr -a m 'cd "~/Extended Mind" & $EDITOR context.md'
 
     # verbosity and settings that you pretty much just always are going to want
     abbr -a cp 'cp -ivr'
