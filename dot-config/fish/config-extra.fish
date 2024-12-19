@@ -28,11 +28,10 @@ status is-interactive; and begin
     abbr -a gd 'cd $CONFIG/dotfiles'
     abbr -a gn 'cd $CONFIG/nvim'
     abbr -a gs 'cd $HOME/sources'
-    abbr -a gm 'cd $MIND'
     abbr -a gx 'cd $NIXCONF'
 
-    abbr -a s 'jump -d $HOME/sources/'
-    abbr -a m 'cd $MIND & $EDITOR context.md'
+    abbr -a jc 'jump -d $CONFIG'
+    abbr -a js 'jump -d $HOME/sources/'
 
     # verbosity and settings that you pretty much just always are going to want
     abbr -a cp 'cp -ivr'
@@ -66,6 +65,10 @@ status is-interactive; and begin
     abbr -a gwdl 'cd /mnt/c/Users/grig'
     abbr -a pwsh 'powershell.exe'
     abbr -a pwshc 'powershell.exe -Command'
+
+    # notes
+    abbr -a jm 'cd $MIND & $EDITOR context.md'
+    abbr -a gm 'cd $MIND'
 
     # misc
     abbr -a stw 'stow --dotfiles --no-folding -t $HOME -d $CONFIG -S dotfiles'
