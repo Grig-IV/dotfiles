@@ -1,4 +1,10 @@
-session_name: default
+session_name: work
 windows:
-  - panes:
-      - echo 'Hello!'
+  - shell_command_before:
+      - cd "$HOME/Extended Mind/"
+    panes:
+      - nvim context.md
+  - shell_command_before:
+      - cd "/mnt/c/Users/grig/source/lc-client/master"
+    panes:
+      - pwshc lazygit
