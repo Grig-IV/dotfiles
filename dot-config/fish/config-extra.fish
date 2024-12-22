@@ -28,6 +28,7 @@ status is-interactive; and begin
     abbr -a gd 'cd $CONFIG/dotfiles'
     abbr -a gn 'cd $CONFIG/nvim'
     abbr -a gs 'cd $HOME/sources'
+    abbr -a gl 'cd $HOME/.local'
     abbr -a gx 'cd $NIXCONF'
 
     abbr -a jc 'jump -d $CONFIG'

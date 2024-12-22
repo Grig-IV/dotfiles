@@ -1,3 +1,7 @@
 function fish_prompt
-    plato
+    if type -q plato
+        plato
+    else
+        printf "\n   > "
+    end
 end
