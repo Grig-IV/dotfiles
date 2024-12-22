@@ -1,0 +1,2 @@
+install:
+    ya pack -i
