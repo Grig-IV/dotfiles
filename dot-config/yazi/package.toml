@@ -1,0 +1,8 @@
+[plugin]
+deps = [
+  { use = "yazi-rs/plugins:smart-enter", rev = "7afba3a" },
+  { use = "yazi-rs/plugins:chmod", rev = "7afba3a" }, { use = "Reledia/glow", rev = "c2ed51e" },
+]
+
+[flavor]
+deps = []

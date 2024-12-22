@@ -1,0 +1,10 @@
+[manager]
+ratio = [0, 2, 3]
+show_symlink = false
+sort_by = "extension"
+sort_dir_first = true
+sort_reverse = false
+
+[plugin]
+# commented out until fixed
+# prepend_previewers = [{ name = "*.md", run = "glow" }]

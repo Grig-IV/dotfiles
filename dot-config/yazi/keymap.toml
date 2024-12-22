@@ -1,0 +1,37 @@
+[[manager.prepend_keymap]]
+desc = "Move cursor to the top"
+on = ["<C-PageUp>"]
+run = "arrow -99999999"
+
+[[manager.prepend_keymap]]
+desc = "Move cursor to the bottom"
+on = ["<C-PageDown>"]
+run = "arrow 99999999"
+
+[[manager.prepend_keymap]]
+desc = "Move cursor up half page"
+on = ["<PageUp>"]
+run = "arrow -50%"
+
+[[manager.prepend_keymap]]
+desc = "Move cursor down half page"
+on = ["<PageDown>"]
+run = "arrow 50%"
+
+[[manager.prepend_keymap]]
+desc = "Quit yazi"
+on = ["<C-q>"]
+run = "quit"
+
+
+# plugins
+
+[[manager.prepend_keymap]]
+desc = "Chmod on selected files"
+on = ["c", "m"]
+run = "plugin chmod"
+
+[[manager.prepend_keymap]]
+desc = "Enter the child directory, or open the file"
+on = ["<Enter>"]
+run = "plugin smart-enter"
