@@ -36,28 +36,30 @@ status is-interactive; and begin
     # shortcuts
     abbr -a gc 'cd $CONFIG'
     abbr -a gd 'cd $CONFIG/dotfiles'
-    abbr -a gn 'cd $CONFIG/nvim'
     abbr -a gs 'cd $HOME/sources'
     abbr -a gl 'cd $HOME/.local'
     abbr -a gx 'cd $NIXCONF'
+    abbr -a glb 'cd $HOME/.local/bin'
 
     abbr -a c 'jump -d $CONFIG; yacd'
     abbr -a s 'jump -d $HOME/sources/; yacd'
     abbr -a d 'jump -dr $CONFIG/dotfiles; yacd'
+    abbr -a t 'jump -d $HOME/media/T7/torrents'
 
     abbr -a cp 'cp -ivr'
     abbr -a mv 'mv -iv'
     abbr -a rm 'rm -vI'
     abbr -a mkdir 'mkdir -pv'
     abbr -a bc 'bc -ql'
+    abbr -a ls 'ls -la'
 
     abbr -a grep 'grep --color=auto'
     abbr -a diff 'diff --color=auto'
     abbr -a ip 'ip -color=auto'
 
     # neovim
-    abbr -a gn 'cd $HOME/.config/nvim'
-    abbr -a n 'jump -r $HOME/.config/neovim'
+    abbr -a gn 'cd $CONFIG/nvim'
+    abbr -a n 'jump -r $CONFIG/nvim'
 
     # nix
     abbr -a hms "home-manager switch --flake \$NIXCONF#$(whoami)@$(hostname)"
