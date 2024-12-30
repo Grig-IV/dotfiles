@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "grig"
 
 
 [editor]
@@ -34,13 +34,16 @@ mode.insert = "I"
 mode.select = "S"
 
 
+[keys.insert]
+esc = ["normal_mode", ":run-shell-command on-insert-exit"]
+
 [keys.normal]
-a = "insert_mode"
-A = "insert_at_line_start"
-t = "append_mode"
-T = "insert_at_line_end"
-w = "open_below"
-W = "open_above"
+a = ["insert_mode", ":run-shell-command on-insert-enter"]
+A = ["insert_at_line_start", ":run-shell-command on-insert-enter"]
+t = ["append_mode", ":run-shell-command on-insert-enter"]
+T = ["insert_at_line_end", ":run-shell-command on-insert-enter"]
+w = ["open_below", ":run-shell-command on-insert-enter"]
+W = ["open_above", ":run-shell-command on-insert-enter"]
 
 o = "move_next_word_start"
 O = "move_next_long_word_start"
@@ -78,3 +81,13 @@ e = "move_next_word_end"
 m = "search_next"
 d = "goto_prev_diag"
 n = "search_next"
+
+[keys.normal.g]
+u = "goto_reference"
+t = "goto_type_definition"
+
+[keys.select]
+o = "extend_next_word_start"
+O = "extend_next_long_word_start"
+n = "extend_prev_word_start"
+N = "extend_prev_long_word_start"

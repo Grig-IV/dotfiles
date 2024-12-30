@@ -1,0 +1,7 @@
+#!/usr/bin/env dash
+
+layout=$(cat $XDG_STATE_HOME/helix/layout)
+
+if [ -n $layout ]; then
+  xkb-switch -s $layout
+fi

@@ -1,0 +1,4 @@
+#!/usr/bin/env dash
+
+xkb-switch > $XDG_STATE_HOME/helix/layout
+xkb-switch -s us

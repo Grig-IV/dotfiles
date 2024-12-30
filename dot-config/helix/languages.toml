@@ -11,3 +11,8 @@ formatter = { command = "taplo", args = ["format", "-"] }
 name = "nix"
 auto-format = true
 formatter = { command = "alejandra", args = ["-"] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+formatter = { command = "js-beautifier", args = ["--stdin"] }

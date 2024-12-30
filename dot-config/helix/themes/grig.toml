@@ -1,0 +1,23 @@
+inherits = "catppuccin_mocha"
+
+"keyword" = { fg = "red", modifiers = ["bold"] }
+"keyword.control" = { fg = "red", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "red", modifiers = ["bold"] }
+
+"function" = "green"
+"function.builtin" = { fg = "mauve" }
+"function.marco" = { fg = "mauve" }
+"function.special" = { fg = "mauve" }
+
+"string" = "#f9e2af"
+
+"type" = "sapphire"
+
+"constant" = { fg = "mauve" }
+
+"variable.parameter" = { fg = "peach", modifiers = ["italic"] }
+"variable.other.member" = "blue"
+
+"namespace" = "sapphire"
+
+"operator" = "text"
