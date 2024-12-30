@@ -1,6 +1,0 @@
-#!/usr/bin/env dash
-
-word=$(:| dmenu -i -p "Add EN:")
-if [ ! -z $word ]; then
-  echo $word >> "$HOME/Extended Mind/areas/languages/eng-words.txt"
-fi

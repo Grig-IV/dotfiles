@@ -1,0 +1,10 @@
+#!/usr/bin/env dash
+
+cd $HOME/books
+
+book=$(fd -e pdf -e epub -e txt -e fb2 | dmenu -i -p "Open book:")
+
+if [ ! -z "$book" ]; then
+  zathura "$book"
+fi
+

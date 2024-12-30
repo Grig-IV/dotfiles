@@ -1,0 +1,7 @@
+#!/usr/bin/env dash
+
+text=$(:| dmenu -i -p "Save to learn:")
+
+if [ ! -z $text ]; then
+  echo $text >> "$MIND/resources/learn.txt"
+fi
