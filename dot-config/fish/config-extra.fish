@@ -36,6 +36,7 @@ status is-interactive; and begin
     # shortcuts
     abbr -a gc 'cd $CONFIG'
     abbr -a gd 'cd $CONFIG/dotfiles'
+    abbr -a gdl 'cd $HOME/Downloads'
     abbr -a gs 'cd $HOME/sources'
     abbr -a gl 'cd $HOME/.local'
     abbr -a gx 'cd $NIXCONF'
