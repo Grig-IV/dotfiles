@@ -1,0 +1,4 @@
+alias f="fish"
+
+bind '"\C-q": "exit\n"'
+
