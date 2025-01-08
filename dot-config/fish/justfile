@@ -1,0 +1,2 @@
+mkLinks:
+    ln -sf $HOME/cloud/fish/fish_history $HOME/.local/share/fish
