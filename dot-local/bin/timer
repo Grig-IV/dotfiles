@@ -1,0 +1,7 @@
+#!/usr/bin/env dash
+
+input=$(:| rofi -dmenu -i -p "Timer:")
+
+if [ ! -z $input ]; then
+  redis-cli PUBLISH self "timer: $input"
+fi
