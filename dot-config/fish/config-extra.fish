@@ -11,7 +11,7 @@ function setup_hm_session_vars
     set -gx XDG_DATA_HOME '/home/grig/.local/share'
     set -gx XDG_STATE_HOME '/home/grig/.local/state'
 
-    set -gx EDITOR hx
+    set -gx EDITOR nvim
 
     set -gx CONFIG "$HOME/.config"
     set -gx MIND "$HOME/mind"
