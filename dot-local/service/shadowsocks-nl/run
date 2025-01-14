@@ -1,0 +1,3 @@
+#!/usr/bin/env dash
+
+exec sslocal -c $HOME/.config/shadowsocks/config-nl.json
