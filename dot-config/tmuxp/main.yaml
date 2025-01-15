@@ -1,10 +1,10 @@
 session_name: work
 windows:
   - shell_command_before:
-      - cd "$HOME/Extended Mind/"
+      - cd "$HOME/mind/"
     panes:
-      - nvim context.md
+      - $EDITOR context.md
   - shell_command_before:
-      - cd "/mnt/c/Users/grig/source/lc-client/master"
+      - cd "/mnt/c/Users/grig/src/lc-client/master"
     panes:
       - pwshc lazygit

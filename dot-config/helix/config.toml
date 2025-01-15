@@ -35,15 +35,15 @@ mode.select = "S"
 
 
 [keys.insert]
-esc = ["normal_mode", ":run-shell-command on-insert-exit"]
+esc = "normal_mode"
 
 [keys.normal]
-a = ["insert_mode", ":run-shell-command on-insert-enter"]
-A = ["insert_at_line_start", ":run-shell-command on-insert-enter"]
-t = ["append_mode", ":run-shell-command on-insert-enter"]
-T = ["insert_at_line_end", ":run-shell-command on-insert-enter"]
-w = ["open_below", ":run-shell-command on-insert-enter"]
-W = ["open_above", ":run-shell-command on-insert-enter"]
+a = "insert_mode"
+A = "insert_at_line_start"
+t = "append_mode"
+T = "insert_at_line_end"
+w = "open_below"
+W = "open_above"
 
 o = "move_next_word_start"
 O = "move_next_long_word_start"
